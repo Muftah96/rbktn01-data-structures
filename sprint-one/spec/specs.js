@@ -30,15 +30,17 @@ define([
       }
     });
 
+
     describe('stack shared behavior', function() {
 
       verifyClass(instantiator).followsPattern(variant, {}, prototypeOfInstances);
 
-      it('reports a size of zero for a new stack', function() {
+      it('reports a size of zero for a new stack',  function() {
         expect(stack.size()).to.equal(0);
+
       });
 
-      it('reports a size of 2 after adding two items', function() {
+      it('reports a size of 2 after adding two items',  function() {
         stack.push('a');
         stack.push('b');
         expect(stack.size()).to.equal(2);

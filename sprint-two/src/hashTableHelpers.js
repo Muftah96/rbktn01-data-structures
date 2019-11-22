@@ -29,6 +29,7 @@ var LimitedArray = function(limit) {
     }
   };
 
+
   var checkLimit = function(index) {
     if (typeof index !== 'number') {
       throw new Error('setter requires a numeric index for its first argument');
@@ -41,9 +42,6 @@ var LimitedArray = function(limit) {
   return limitedArray;
 };
 
-// This is a "hashing function". You don't need to worry about it, just use it
-// to turn any string into an integer that is well-distributed between the
-// numbers 0 and `max`
 var getIndexBelowMaxForKey = function(str, max) {
   var hash = 0;
   for (var i = 0; i < str.length; i++) {
